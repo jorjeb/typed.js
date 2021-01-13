@@ -23,7 +23,7 @@ export default class Initializer {
     self.options = { ...defaults, ...options };
 
     // attribute to type into
-    self.isInput = self.el.tagName.toLowerCase() === 'input';
+    self.isInput = (self.el.tagName.toLowerCase() === 'input' || self.el.tagName.toLowerCase() === 'textarea');
     self.attr = self.options.attr;
     self.bindInputFocusEvents = self.options.bindInputFocusEvents;
 
